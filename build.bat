@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 set "files="
-for /r %%f in (*.c) do (
+for /r %%f in (src\*.c) do (
     set "files=!files! %%f"
 )
 

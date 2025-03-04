@@ -1,5 +1,7 @@
 #include "defines.h"
 
+#include <string.h>
+
 #include "wayland/wl_client.h"
 
 static void wl_registry_global(void *data, struct wl_registry *regitry,
@@ -15,7 +17,7 @@ int main(void)
     struct wl_display *display = wl_display_connect(0);
     struct wl_registry *registry = wl_display_get_registry(display);
 
-    static struct wl_registry_listener registry_listener = {
+    struct wl_registry_listener registry_listener = {
         .global = wl_registry_global,
         .global_remove = wl_registry_global_remove
     };
