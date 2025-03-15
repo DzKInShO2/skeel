@@ -28,4 +28,4 @@ then
     wayland-scanner private-code < /usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml > vendor/wayland/xdg_shell.c
 fi
 
-gcc -o skeel $(find -type f -name "src/*.c") $links $flags -I./src/ -I./vendor/
+gcc -o skeel $(find -type f -name "*.c") $links $flags -I./src/ -I./vendor/
